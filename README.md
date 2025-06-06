@@ -183,6 +183,10 @@
 </div>
 <p>
 
+## Workflow Deploy Code 👇
+
+
+```
 name: Node.js CI
 
 on:
@@ -216,5 +220,4 @@ jobs:
 
     - name: Start application
       run: npm start
-      
-      </p>
+```
