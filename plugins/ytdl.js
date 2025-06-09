@@ -34,30 +34,17 @@ cmd({
 
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
-        let info = `🧚🏻‍♀️ _Sα֤֦֦֥֣֧֤֦֦֤֢֢֛֑֖֮֮֘֯֯֡֗֘֜֒ͮ֙֗ɱ⃞υ֟Zα֘֘֘X සිං⃞֥֤֛֧֚֘֜දු ֙ල֣֛֚֜֝֨֙֘֗֙֙֙֙֘න්⃞තේ_🧚🏻‍♀️\n\n`+
-            `📜 ~𝐓𝐢𝐭𝐭𝐥𝐞~ ᐖ ${title || "Unknown"}\n` +
-            `🕰️ ~𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧~ ᐖ ${timestamp ||"Unknown"\n` +
+        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
+            `🎵 *Title:* ${title || "Unknown"}\n` +
+            `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
             `👀 *Views:* ${views || "Unknown"}\n` +
-            `🌛 ~𝐑𝐞𝐥𝐞𝐚𝐬𝐞~ 𝐀𝐠𝐨 ᐖ ${ago || "Unknown"\n`+
-            `👨🏻‍🎤 ~𝐎𝐰𝐧𝐞𝐫~ ᐖ ${author?.name || "Unknown"}\n` +
-            ` ~⬇️ ඔබට අවශ්‍ය දේ 𝐑𝐞𝐩𝐥𝐲 කරන්න...~\n` +
+            `🌏 *Release Ago:* ${ago || "Unknown"}\n` +
+            `👤 *Author:* ${author?.name || "Unknown"}\n` +
+            `🖇 *Url:* ${url || "Unknown"}\n\n` +
+            `🔽 *Reply with your choice:*\n` +
             `1.1 *Audio Type* 🎵\n` +
             `1.2 *Document Type* 📁\n\n` +
-            `🖇 *Url:* 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙇𝙞𝙣𝙠 :- https://whatsapp.com/channel/0029VbAcwLD77qVM2wp1mc0x \n\n` +
-            `${config.FOOTER || "• SamuZaX •"}`;
-
-
-
-
-
-
-👨🏻‍🎤 ~𝐎𝐰𝐧𝐞𝐫~ ᐖ
-
-
-
-
-
-
+            `${config.FOOTER || "𓆩JawadTechX𓆪"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
@@ -78,21 +65,21 @@ cmd({
                 let msg;
                 let type;
                 let response;
-                
+
                 if (userReply === "1.1") {
                     msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
                     response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
-                    
+
                 } else if (userReply === "1.2") {
                     msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
                     type = { document: { url: downloadUrl }, fileName: `${title}.mp3`, mimetype: "audio/mpeg", caption: title };
-                    
+
                 } else { 
                     return await reply("❌ Invalid choice! Reply with 1.1 or 1.2.");
                 }
@@ -112,4 +99,3 @@ cmd({
         await reply(`❌ *An error occurred:* ${error.message || "Error!"}`);
     }
 });
-                               
