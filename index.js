@@ -113,21 +113,19 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `╭─〔 *🤖 KHAN-MD BOT* 〕  
+  let up = `╭─〔 *🤖 SamuZaX-MD BOT* 〕  
 ├─▸ *Ultra Super Fast Powerfull ⚠️*  
-│     *World Best BOT KHAN-MD* 
+│     *World Best BOT SamuZaX-MD* 
 ╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
 
-- *🖤 Thank You for Choosing KHAN-MD!* 
+- *🖤 Thank You for Choosing SamuZaX!* 
 
 ╭──〔 🔗 *Information* 〕  
-├─ 🧩 *Prefix:* = ${prefix}
-├─ 📢 *Join Channel:*  
-│    https://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j  
+├─ 🧩 *Prefix:* = ${prefix} 
 ├─ 🌟 *Star the Repo:*  
-│    https://github.com/JawadYT36/KHAN-MD  
-╰─🚀 *Powered by JawadTechX*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/7zfdcq.jpg` }, caption: up })
+│    https://github.com/CyberSamuZaX  
+╰─🚀 *Powered by SamuZaX*`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/aj1z1r.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -783,7 +781,7 @@ if (isBanned) return; // Ignore banned users completely
   }
   
   app.get("/", (req, res) => {
-  res.send("KHAN MD STARTED ✅");
+  res.send("SamuZaX-MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
