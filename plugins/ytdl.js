@@ -34,17 +34,30 @@ cmd({
 
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
-        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
-            `🎵 *Title:* ${title || "Unknown"}\n` +
-            `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
+        let info = `🧚🏻‍♀️ _Sα֤֦֦֥֣֧֤֦֦֤֢֢֛֑֖֮֮֘֯֯֡֗֘֜֒ͮ֙֗ɱ⃞υ֟Zα֘֘֘X සිං⃞֥֤֛֧֚֘֜දු ֙ල֣֛֚֜֝֨֙֘֗֙֙֙֙֘න්⃞තේ_🧚🏻‍♀️\n\n`+
+            `📜 ~𝐓𝐢𝐭𝐭𝐥𝐞~ ᐖ ${title || "Unknown"}\n` +
+            `🕰️ ~𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧~ ᐖ ${timestamp ||"Unknown"\n` +
             `👀 *Views:* ${views || "Unknown"}\n` +
-            `🌏 *Release Ago:* ${ago || "Unknown"}\n` +
-            `👤 *Author:* ${author?.name || "Unknown"}\n` +
-            `🖇 *Url:* ${url || "Unknown"}\n\n` +
-            `🔽 *Reply with your choice:*\n` +
+            `🌛 ~𝐑𝐞𝐥𝐞𝐚𝐬𝐞~ 𝐀𝐠𝐨 ᐖ ${ago || "Unknown"\n`+
+            `👨🏻‍🎤 ~𝐎𝐰𝐧𝐞𝐫~ ᐖ ${author?.name || "Unknown"}\n` +
+            ` ~⬇️ ඔබට අවශ්‍ය දේ 𝐑𝐞𝐩𝐥𝐲 කරන්න...~\n` +
             `1.1 *Audio Type* 🎵\n` +
             `1.2 *Document Type* 📁\n\n` +
+            `🖇 *Url:* 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙇𝙞𝙣𝙠 :- https://whatsapp.com/channel/0029VbAcwLD77qVM2wp1mc0x \n\n` +
             `${config.FOOTER || "• SamuZaX •"}`;
+
+
+
+
+
+
+👨🏻‍🎤 ~𝐎𝐰𝐧𝐞𝐫~ ᐖ
+
+
+
+
+
+
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
