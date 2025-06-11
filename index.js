@@ -68,7 +68,7 @@ const {
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("IK~", '');
+const sessdata = config.SESSION_ID.replace("samuzaX~", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
@@ -113,19 +113,21 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `╭─〔 *🤖 SamuZaX-MD BOT* 〕  
+  let up = `╭─〔 *🤖 KHAN-MD BOT* 〕  
 ├─▸ *Ultra Super Fast Powerfull ⚠️*  
-│     *World Best BOT SamuZaX-MD* 
+│     *World Best BOT KHAN-MD* 
 ╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
 
-- *🖤 Thank You for Choosing SamuZaX!* 
+- *🖤 Thank You for Choosing KHAN-MD!* 
 
 ╭──〔 🔗 *Information* 〕  
-├─ 🧩 *Prefix:* = ${prefix} 
+├─ 🧩 *Prefix:* = ${prefix}
+├─ 📢 *Join Channel:*  
+│    https://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j  
 ├─ 🌟 *Star the Repo:*  
-│    https://github.com/CyberSamuZaX  
-╰─🚀 *Powered by SamuZaX*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/aj1z1r.jpg` }, caption: up })
+│    https://github.com/JawadYT36/KHAN-MD  
+╰─🚀 *Powered by JawadTechX*`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/7zfdcq.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -781,7 +783,7 @@ if (isBanned) return; // Ignore banned users completely
   }
   
   app.get("/", (req, res) => {
-  res.send("SamuZaX-MD STARTED ✅");
+  res.send("KHAN MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
