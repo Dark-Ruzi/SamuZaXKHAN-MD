@@ -34,17 +34,14 @@ cmd({
 
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
-        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
-            `🎵 *Title:* ${title || "Unknown"}\n` +
-            `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
-            `👀 *Views:* ${views || "Unknown"}\n` +
-            `🌏 *Release Ago:* ${ago || "Unknown"}\n` +
-            `👤 *Author:* ${author?.name || "Unknown"}\n` +
-            `🖇 *Url:* ${url || "Unknown"}\n\n` +
-            `🔽 *Reply with your choice:*\n` +
-            `1.1 *Audio Type* 🎵\n` +
-            `1.2 *Document Type* 📁\n\n` +
-            `${config.FOOTER || "𓆩JawadTechX𓆪"}`;
+        let info = `🧚‍♀️ѕαмυ乙α乂 සිංදු ලන්තෙ🧚‍♀️\n\n` +
+            `🧚‍♀️ *Ｎａｍｅ:* ${title || "Unknown"}\n` +
+            `🧚‍♀️ *Duration:* ${timestamp || "Unknown"}\n` +
+            `🧚‍♀️ *Ｖ ｉｅｗｓ:* ${views || "Unknown"}\n` +
+            `🧚‍♀️ *Ｕｐｌｏａｄ:* ${ago || "Unknown"}\n` +
+            `🧚‍♀️ *Ｏｗｎｅｒ:* ${author?.name || "Unknown"}\n` +
+            `🧚‍♀️ *Ｌｉｎｋ:* ${url || "Unknown"}\n\n` +
+            `${config.FOOTER || "🌜ＳａｍｕＺａＸ🌛"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
@@ -67,14 +64,14 @@ cmd({
                 let response;
 
                 if (userReply === "1.1") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, { text: "⏳ Ｕｐｌｏａｄｅｎｇ..." }, { quoted: mek });
                     response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
 
                 } else if (userReply === "1.2") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, { text: "⏳ Ｕｐｌｏａｄｉｎｇ..." }, { quoted: mek });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
