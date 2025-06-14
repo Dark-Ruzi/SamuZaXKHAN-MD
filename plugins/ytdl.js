@@ -41,10 +41,10 @@ cmd({
             `🧚‍♀️ *Ｕｐｌｏａｄ:* ${ago || "Unknown"}\n` +
             `🧚‍♀️ *Ｏｗｎｅｒ:* ${author?.name || "Unknown"}\n` +
             `🧚‍♀️ *Ｌｉｎｋ:* ${url || "Unknown"}\n\n` +
-            `🔽 *Reply with your choice:*\n` +Add commentMore actions
-            `1.1 *Audio Type* 🎵\n` +
-            `1.2 *Document Type* 📁\n\n` +
-            `${config.FOOTER || "🌜ＳａｍｕＺａＸ🌛"}`;
+            `🧚‍♀️ *Reply with your choice:*\n` +Add commentMore actions
+            `1.1 *Audio Type* 🧚‍♀️\n` +
+            `1.2 *Document Type* 🧚‍♀️\n\n` +
+            `${config.FOOTER || "🧚‍♀️ＳａｍｕＺａＸ🧚‍♀️"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
@@ -67,14 +67,14 @@ cmd({
                 let response;
 
                 if (userReply === "1.1") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Ｕｐｌｏａｄｅｎｇ..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, { text: "⏳ U P L O A D I N G..." }, { quoted: mek });
                     response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
 
                 } else if (userReply === "1.2") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Ｕｐｌｏａｄｉｎｇ..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, { text: "⏳ U P L O A D I N G..." }, { quoted: mek });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
