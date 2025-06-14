@@ -41,6 +41,9 @@ cmd({
             `🧚‍♀️ *Ｕｐｌｏａｄ:* ${ago || "Unknown"}\n` +
             `🧚‍♀️ *Ｏｗｎｅｒ:* ${author?.name || "Unknown"}\n` +
             `🧚‍♀️ *Ｌｉｎｋ:* ${url || "Unknown"}\n\n` +
+            `🔽 *Reply with your choice:*\n` +Add commentMore actions
+            `1.1 *Audio Type* 🎵\n` +
+            `1.2 *Document Type* 📁\n\n` +
             `${config.FOOTER || "🌜ＳａｍｕＺａＸ🌛"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
